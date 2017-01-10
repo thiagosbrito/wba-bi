@@ -1,0 +1,119 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-filter">
+      <form role="form" class="form">
+        <fieldset>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>
+                  Empresa:
+                </label>
+                <select name="" id="" class="form-control" ng-model="filtro.empresa" ng-options="empresa[0] as empresa[1] for empresa in empresas">
+                  <option value="0">TODOS</option>
+                </select>
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>
+                  Cedente:
+                </label>
+                <div class="input-group">
+                  <input type="text" class="form-control" ng-model="filtro.cedente" uib-typeahead="cedente[0] as cedente[1] for cedente in cedentes">
+                  <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title text-center">Pontual</h3>
+      </div>
+      <div class="panel-body">
+        <highchart id="chart1" config="pontualChart"></highchart>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default" style="max-height: 478px; min-height: 478px">
+      <div class="panel-heading">
+        <h3 class="panel-title text-center">
+          Regresso
+        </h3>
+      </div>
+      <div class="panel-body">
+        <highchart id="chart1" config="regressoChart"></highchart>
+        <!-- <table class="table table-striped" style="font-size: 12px">
+          <thead>
+            <tr>
+              <th ng-repeat="colum in colunas">{{colum}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="valores in columnData.slice(((currentPage-1)*pageSize), ((currentPage)*pageSize))">
+              <td>{{valores[0]}}</td>
+              <td>{{valores[1]}}</td>
+              <td>{{valores[2]}}</td>
+              <td>{{valores[3]}}</td>
+              <td>{{valores[4]}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <uib-pager total-items="columnData.length" style="margin-top: -20px;" ng-model="currentPage" items-per-page="pageSize"></uib-pager> -->
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title text-center">
+          Liquidez Geral
+        </h3>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Mês</th>
+              <th>Aberto</th>
+              <th>Vencido</th>
+              <th>À Vencer</th>
+              <th>Confirmado</th>
+              <th>Total Liquidado</th>
+              <th>Pontual</th>
+              <th>Em Atraso</th>
+              <th>Regresso</th>
+              <th>PDD</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

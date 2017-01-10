@@ -1,0 +1,54 @@
+/*Panel tabs*/
+
+.panel-heading {
+  padding: 15px 15px !important;
+}
+.panel-tabs {
+  position: relative;
+  bottom: 30px;
+  clear: both;
+  border-bottom: 1px solid transparent;
+  > li {
+    float: left;
+    margin-bottom: -1px;
+    > a {
+      margin-right: 2px;
+      margin-top: 4px;
+      line-height: .85;
+      border: 1px solid transparent;
+      border-radius: 4px 4px 0 0;
+      color: #ffffff;
+      transition: all ease 0.2s;
+      padding-bottom: 18px;
+      margin-top: -3px;
+      padding-top: 18px;
+      &:hover {
+        border-color: transparent;
+        color: #ffffff;
+        background-color: #3770a2;
+      }
+      &:focus {
+        background-color: #275a86;
+      }
+    }
+    &.active > a {
+      color: #fff;
+      cursor: default;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      border-bottom-color: #FFF;
+      border-bottom: 3px solid;
+      padding-bottom: 18px;
+      &:hover, &:focus {
+        color: #fff;
+        cursor: default;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        border-bottom-color: #264f73;
+        border-bottom: 3px solid;
+      }
+    }
+  }
+}
